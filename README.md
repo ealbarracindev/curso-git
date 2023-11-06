@@ -28,6 +28,12 @@ _Lista de los comandos de Git más utilizados_
 | `git config --global user.email [emailDeUsuario]` | Establecer una configuración específica de email |
 | `git config --global --add --bool push.autoSetupRemote true` | cuando no existe seguimiento ascendente para la rama actual; esta opción surte efecto con las opciones push.default simple |
 
+### Comandos alias
+
+| Comando | Descripción |
+| ------- | ----------- |
+| `git config --global alias.[nombreAlias] "status --short"` | Crea un alias para un comando a utilizar |
+
 ### Comandos básicos
 
 | Comando | Descripción |
