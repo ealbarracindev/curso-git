@@ -48,6 +48,7 @@ _Lista de los comandos de Git más utilizados_
 
 | Comando | Descripción |
 | ------- | ----------- |
+| `git rests --soft [hash del commit que se desea mover]` | Saca los cambios del stage y los deja listo para el commit |
 | `git rests --mixed [hash del commit que se desea mover]` | Saca los cambios del stage y los deja listo para el commit |
 | `git rests --hard [hash del commit que se desea mover]` | Se mueve al commit del hash seleccionado |
 | `git reflog` | Es la referencia a todo lo sucedido en la historia del reposictorio |
@@ -67,10 +68,13 @@ _Lista de los comandos de Git más utilizados_
 | `git checkout [nombre de la rama]` | Cambia a una rama concreta |
 | `git checkout -` | Cambia a la última rama activa |
 | `git checkout -- [nombre-del-archivo.txt]` | Descarta cambios en un archivo |
+| `git checkout -- .` | Descarta cambios producidos en el proyecto incluso eliminaciones de carpetas/archivos |
 | `git merge [nombre de la rama]` | Combina una rama concreta con la rama activa |
 | `git merge [nombre de la rama de origen] [nombre de la rama de destino]` | Combina una rama concreta (rama de origen) con una rama nueva (rama de destino) |
 | `git stash` | Revierte los últimos cambios y errores en el directorio actual |
 | `git stash clear` | Revierte todos los cambios en el directorio actual |
+| `git switch [nombre de la rama]` | Cambia a una rama concreta |
+| `git switch -c [nombre de la rama]` | Crea una nueva rama y nos desplaza hasta ella |
 
 ### Compartir y actualizar proyectos
 
@@ -94,6 +98,17 @@ _Lista de los comandos de Git más utilizados_
 | `git log --oneline` | Visualiza los cambios (resumido)) |
 | `git diff [source branch] [target branch]` | Vista previa de los cambios antes de hacer un merge |
 
+### Tags - Etiquetas
+
+| Comando | Descripción |
+| ------- | ----------- |
+| `git tag ` | Muestra una lista de todos los tags |
+| `git tag [nombre o version semantica]` | Crea un tag y etiqueta un commit |
+| `git tag -a v1.0.0 -m [mensaje]` | Crea un tag con una version anotada y con un mensaje |
+| `git tag -a v0.1.0 hash -m [mensaje]` | Crea un tag con una version anotada de un commit especifico (el del hash ingresado) |
+| `git tag -d [nombre o version semantica]` | Elimina un tag |
+| `git show [nombre o version semantica del tag]` | Muestra informacion de un tag en detalles |
+
 Publicacion
 ------------
 ¿Terminaste con tu proyecto?
@@ -111,3 +126,5 @@ Publicacion
 | `git push origin v1.0.0` | Subida de version generada master |
 
 Reemplace 1.0.0 en el fragmento aquí con sus versiones apropiadas. Ahora tienes una etiqueta guardada.
+
+Nota: Si estas ejecutando los comandos desde la consola y deseas confirmar os cambioy salir precionar la tecla "Esc" y luego ingresar ":wq!"
