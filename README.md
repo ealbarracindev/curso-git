@@ -44,6 +44,14 @@ _Lista de los comandos de Git más utilizados_
 | `git commit -m "[Mensaje del commit]"` | Crea un mensaje explicativo de los cambios |
 | `git rm -r [nombre-del-archivo.txt]` | Elimina un archivo (o carpeta) |
 
+### Viajes en el tiempo
+
+| Comando | Descripción |
+| ------- | ----------- |
+| `git rests --mixed [hash del commit que se desea mover]` | Saca los cambios del stage y los deja listo para el commit |
+| `git rests --hard [hash del commit que se desea mover]` | Se mueve al commit del hash seleccionado |
+| `git reflog` | Es la referencia a todo lo sucedido en la historia del reposictorio |
+
 ### Ramas y fusiones
 
 | Comando | Descripción |
